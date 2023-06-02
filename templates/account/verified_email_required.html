@@ -1,0 +1,21 @@
+{% extends "account/base.html" %} {% load i18n %} {% block head_title %}{% trans
+"Verify Your E-mail Address" %}{% endblock %} {% block content %}
+<h1>{% trans "Verify Your E-mail Address" %}</h1>
+
+{% url 'account_email' as email_url %}
+
+<p>
+  {% blocktrans %}Cette partie est réservée à ceux connecté. {% endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans %}We have sent an e-mail to you for verification. {%
+  endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans %}<strong>Note:</strong> Vous pouvez
+  <a href="{{ email_url }}">changer votre e-mail</a>.{% endblocktrans %}
+</p>
+
+{% endblock %}

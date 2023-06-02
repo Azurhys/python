@@ -1,0 +1,11 @@
+{% extends "socialaccount/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Erreur de connection" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Erreur de connection" %}</h1>
+
+<p>{% trans "Une erreur est survenue en essayant de vous connecter" %}</p>
+{% endblock %}
